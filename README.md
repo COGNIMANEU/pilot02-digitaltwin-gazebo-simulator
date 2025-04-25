@@ -46,7 +46,7 @@ Example of Gazebo environment:
 
 Example of a simple AGV model and world:
 
-![Gazebo Demo](./test/screenshot-simpleagvmodel-world)
+![Gazebo Demo](./test/screenshot-simpleagvmodel-world.png)
 
 ## Contributing
 
