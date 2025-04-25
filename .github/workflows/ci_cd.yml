@@ -32,5 +32,4 @@ jobs:
     # 4. Clean up (remove containers and images after test)
     - name: Clean up
       run: |
-        docker-compose down
         docker rmi digitaltwin_gazebo_image:latest
