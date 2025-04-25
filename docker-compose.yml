@@ -1,0 +1,20 @@
+services:
+  # Container for Gazebo Simulator
+  gazebo_simulator:
+    build:
+      context: ./gazebo  
+    container_name: gazebo_simulator
+    environment:
+      - CONFIG_DIR=/config
+      - LAUNCH_FILE=gazebo_test_agv.launch.py  # gazebo_test_agv.launch.py  or just gazebo_test.launch.py  
+      - VNC_PASSWORD=1234  
+      - VNC_PORT=6080      
+      - RESOLUTION=1280x800
+      - COL_DEPTH=24
+    ports:
+      - "6080:6080"       # NoVNC navigator -> http://localhost:6080/vnc.html
+      - "5900:5900"       # VNC traditional
+    volumes:
+      - ./config:/config  
+    stdin_open: true
+    tty: true
